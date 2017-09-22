@@ -62,6 +62,7 @@ public class MouseHook {
                                 System.err.println("mouse down left button down, x=" + lParam.pt.x + " y=" + lParam.pt.y);
                                 break;
                             case MouseHook.WM_LBUTTONUP:
+                                ChangeTheWallPicture hi = new ChangeTheWallPicture();
                                 System.err.println("mouse up left button up, x=" + lParam.pt.x + " y=" + lParam.pt.y);
                                 break;
                         }
