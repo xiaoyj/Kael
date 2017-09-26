@@ -4,9 +4,9 @@ import com.sun.jna.platform.win32.WinReg;
 import com.sun.jna.win32.StdCallLibrary;
 
 public class ChangeTheWallPicture {
-    public void ChangeTheWallPicture() {
+    public void changeTheWallPicture(String fileLocation) {
         try {
-            String fullFnm = "C:/Users/Administrator/Pictures/lovewallpaper/286485-106.jpg";
+            String fullFnm = fileLocation;
             //System.out.println("Full fnm: " + fullFnm);
       /* 3 registry key changes to HKEY_CURRENT_USER\Control Panel\Desktop
          These three keys (and many others) are explained at

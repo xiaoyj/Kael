@@ -5,11 +5,13 @@ import com.sun.jna.platform.win32.WinDef;
 import com.sun.jna.platform.win32.WinUser;
 
 public class MouseHook {
-    public static final int WM_LBUTTONDOWN = 513;
-    public static final int WM_LBUTTONUP = 514;//鼠标事件编码
+    public static final int WM_WBUTTONDOWN = 519;
+    public static final int WM_WBUTTONUP = 520;//鼠标事件编码
 
+    public static int backgroundOrder=0;
     public User32 lib;
     private static WinUser.HHOOK hhk;
+    private static ChangeTheWallPicture change = new ChangeTheWallPicture();
     private MouseHookListener mouseHook;
     private WinDef.HMODULE hMod;
     private boolean isWindows = false;
@@ -58,12 +60,26 @@ public class MouseHook {
                 public WinDef.LRESULT callback(int nCode, WinDef.WPARAM wParam, MouseHookStruct lParam) {
                     if(nCode>=0){
                         switch(wParam.intValue()){
-                            case MouseHook.WM_LBUTTONDOWN:
-                                System.err.println("mouse down left button down, x=" + lParam.pt.x + " y=" + lParam.pt.y);
-                                break;
-                            case MouseHook.WM_LBUTTONUP:
-                                ChangeTheWallPicture hi = new ChangeTheWallPicture();
-                                System.err.println("mouse up left button up, x=" + lParam.pt.x + " y=" + lParam.pt.y);
+//                            case MouseHook.WM_WBUTTONDOWN:
+//                                System.err.println("mouse down left button down, x=" + lParam.pt.x + " y=" + lParam.pt.y);
+//                                break;
+                            case MouseHook.WM_WBUTTONUP:
+//                                change.changeTheWallPicture("C:/Users/Administrator/Pictures/lovewallpaper/loading.jpg");
+                                switch (backgroundOrder){
+                                    case 0:
+                                        change.changeTheWallPicture("C:/Users/Administrator/Pictures/lovewallpaper/loading.jpg");
+                                        backgroundOrder=1;
+                                        break;
+                                    case 1:
+                                        change.changeTheWallPicture("C:/Users/Administrator/Pictures/lovewallpaper/processing.jpg");
+                                        backgroundOrder=2;
+                                        break;
+                                    case 2:
+                                        change.changeTheWallPicture("C:/Users/Administrator/Pictures/lovewallpaper/conforming.jpg");
+                                        backgroundOrder=0;
+                                        break;
+                                }
+                                System.err.println(backgroundOrder);
                                 break;
                         }
                     }

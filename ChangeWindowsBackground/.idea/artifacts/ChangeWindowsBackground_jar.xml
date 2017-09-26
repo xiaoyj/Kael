@@ -1,0 +1,10 @@
+<component name="ArtifactManager">
+  <artifact type="jar" build-on-make="true" name="ChangeWindowsBackground:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/ChangeWindowsBackground_jar</output-path>
+    <root id="archive" name="ChangeWindowsBackground.jar">
+      <element id="module-output" name="ChangeWindowsBackground" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/7427c757-33c3-3cc7-af12-153274c27b7b/Art0.5WallpaperSet/jna-platform-4.1.0.jar" path-in-jar="/" />
+      <element id="extracted-dir" path="$USER_HOME$/Desktop/7427c757-33c3-3cc7-af12-153274c27b7b/Art0.5WallpaperSet/jna-4.1.0.jar" path-in-jar="/" />
+    </root>
+  </artifact>
+</component>
