@@ -10,7 +10,7 @@ import java.awt.event.MouseEvent;
 import java.awt.geom.RoundRectangle2D;
 /**
  * 用户登录窗体（按照设计图片效果制作）
- * @author admin
+ * @author xiaoyijie
  *
  */
 public class Windows{
@@ -55,9 +55,10 @@ public class Windows{
         //设置JFrame禁用本地外观，使用下面自定义设置的外观；
         JFrame.setDefaultLookAndFeelDecorated(true);
         frame = new JFrame();
-        frame.setBounds(0, 0, 300, 490);
+        frame.setBounds(0, 0, 600, 800);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.getContentPane().setLayout(null);
+        frame.setTitle("DNS Monitor(by xiaoyijie)");
         /**
          * 对窗体进行基本设置
          */
@@ -73,14 +74,14 @@ public class Windows{
         //设置背景颜色，记住一定要修改frame.getContentPane()的颜色，因为我们看到的都是这个的颜色而并不是frame的颜色
         frame.getContentPane().setBackground(Color.white);
         /**
-         * 插入顶部非凡汽车背景图片
+         * 插入安徽移动logo图片
          */
         //创建具有分层的JLayeredPane
         JLayeredPane layeredPane = new JLayeredPane();
-        layeredPane.setBounds(0, -5, 300, 200);
+        layeredPane.setBounds(0, -5, 600, 400);
         frame.getContentPane().add(layeredPane);
         // 创建图片对象
-        ImageIcon img = new ImageIcon(Windows.class.getResource("/src/dingbu.jpg"));
+        ImageIcon img = new ImageIcon(Windows.class.getResource("images/logo.jpg"));
         //设置图片在窗体中显示的宽度、高度
         img.setImage(img.getImage().getScaledInstance(300, 200,Image.SCALE_DEFAULT));
 
@@ -95,7 +96,7 @@ public class Windows{
          * 插入窗体关闭的背景图片及功能
          */
         // 创建图片对象
-        ImageIcon closeImg = new ImageIcon(Windows.class.getResource("/images/close.png"));
+        ImageIcon closeImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
         //设置图片在窗体中显示的宽度、高度
         closeImg.setImage(closeImg.getImage().getScaledInstance(31, 31,Image.SCALE_DEFAULT));
 
@@ -103,7 +104,7 @@ public class Windows{
         closePanel.setBounds(269, -5, 31, 31);
         layeredPane.add(closePanel,JLayeredPane.MODAL_LAYER);
 
-        JLabel closeLabel = new JLabel("");
+        final JLabel closeLabel = new JLabel("");
         closePanel.add(closeLabel);
         closeLabel.setIcon(closeImg);
         closeLabel.addMouseListener(new MouseAdapter() {
@@ -117,7 +118,7 @@ public class Windows{
             @Override
             public void mouseEntered(MouseEvent e) {
                 // 创建图片对象
-                ImageIcon closeImg1 = new ImageIcon(Windows.class.getResource("/images/mouse_close.png"));
+                ImageIcon closeImg1 = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
                 //设置图片在窗体中显示的宽度、高度
                 closeImg1.setImage(closeImg1.getImage().getScaledInstance(31, 31,Image.SCALE_DEFAULT));
                 closeLabel.setIcon(closeImg1);
@@ -126,7 +127,7 @@ public class Windows{
             @Override
             public void mouseExited(MouseEvent e) {
                 // 创建图片对象
-                ImageIcon closeImg = new ImageIcon(Windows.class.getResource("/images/close.png"));
+                ImageIcon closeImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
                 //设置图片在窗体中显示的宽度、高度
                 closeImg.setImage(closeImg.getImage().getScaledInstance(31, 31,Image.SCALE_DEFAULT));
                 closeLabel.setIcon(closeImg);
@@ -136,7 +137,7 @@ public class Windows{
          * 插入窗体最小化的背景图片及功能
          */
         // 创建图片对象
-        ImageIcon minImg = new ImageIcon(Windows.class.getResource("/images/min.png"));
+        ImageIcon minImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
         //设置图片在窗体中显示的宽度、高度
         minImg.setImage(minImg.getImage().getScaledInstance(31, 31,Image.SCALE_DEFAULT));
 
@@ -144,7 +145,7 @@ public class Windows{
         minPanel.setBounds(237, -5, 31, 31);
         layeredPane.add(minPanel,JLayeredPane.MODAL_LAYER);
 
-        JLabel minLabel = new JLabel("");
+        final JLabel minLabel = new JLabel("");
         minLabel.addMouseListener(new MouseAdapter() {
             //鼠标点击最小化图片，实现最小化窗体的功能
             @Override
@@ -155,7 +156,7 @@ public class Windows{
             @Override
             public void mouseEntered(MouseEvent e) {
                 // 创建图片对象
-                ImageIcon minImg1 = new ImageIcon(Windows.class.getResource("/images/mouse_min.png"));
+                ImageIcon minImg1 = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
                 //设置图片在窗体中显示的宽度、高度
                 minImg1.setImage(minImg1.getImage().getScaledInstance(31, 31,Image.SCALE_DEFAULT));
                 minLabel.setIcon(minImg1);
@@ -164,7 +165,7 @@ public class Windows{
             @Override
             public void mouseExited(MouseEvent e) {
                 // 创建图片对象
-                ImageIcon minImg = new ImageIcon(Windows.class.getResource("/images/min.png"));
+                ImageIcon minImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
                 //设置图片在窗体中显示的宽度、高度
                 minImg.setImage(minImg.getImage().getScaledInstance(31, 31,Image.SCALE_DEFAULT));
                 minLabel.setIcon(minImg);
@@ -176,7 +177,7 @@ public class Windows{
          * 插入用户名输入框前面的图片
          */
         // 创建图片对象
-        ImageIcon userNameImg = new ImageIcon(Windows.class.getResource("/images/user_name.png"));
+        ImageIcon userNameImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
         //设置图片在窗体中显示的宽度、高度
         userNameImg.setImage(userNameImg.getImage().getScaledInstance(40, 40,Image.SCALE_DEFAULT));
 
@@ -222,7 +223,7 @@ public class Windows{
          * 插入密码输入框前面的图片
          */
         // 创建图片对象
-        ImageIcon passwordImg = new ImageIcon(Windows.class.getResource("/images/password.png"));
+        ImageIcon passwordImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
         //设置图片在窗体中显示的宽度、高度
         passwordImg.setImage(passwordImg.getImage().getScaledInstance(40, 40,Image.SCALE_DEFAULT));
 
@@ -269,7 +270,7 @@ public class Windows{
          * 插入验证码输入框前面的图片
          */
         // 创建图片对象
-        ImageIcon verifyCodeImg = new ImageIcon(Windows.class.getResource("/images/verify_code.png"));
+        ImageIcon verifyCodeImg = new ImageIcon(Windows.class.getResource("images/dingbu.jpg"));
         //设置图片在窗体中显示的宽度、高度
         verifyCodeImg.setImage(verifyCodeImg.getImage().getScaledInstance(40, 40,Image.SCALE_DEFAULT));
 
