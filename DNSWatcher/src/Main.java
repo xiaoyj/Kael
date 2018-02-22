@@ -5,9 +5,8 @@
  * Description:DNS监测
  */
 public class Main {
-    public static void main(String[] args){
-//        Watcher watch = new Watcher();
-//        System.out.print(watch.dnsLookup("D:/test.xlsx"));
-        Design design = new Design();
+    public static void main(String[] args) throws Exception{
+       Designer design = new Designer();
+       design.show();
     }
 }

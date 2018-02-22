@@ -31,11 +31,9 @@ public class Watcher {
                 ipLookup ="error";
             }
             if (webMap.get(web).toString().contains(ipLookup)){
-                System.out.println("1");
-                ipIsTrue.put(web,"Success");
+                ipIsTrue.put(web,ipLookup+" success");
             }else {
-                System.out.println("2");
-                ipIsTrue.put(web,"False");
+                ipIsTrue.put(web,ipLookup+" false");
             }
         }
         return ipIsTrue;

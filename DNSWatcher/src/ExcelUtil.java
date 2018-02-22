@@ -231,7 +231,4 @@ public class ExcelUtil {
     public static void setNf(DecimalFormat nf) {
         ExcelUtil.nf = nf;
     }
-
-
-
 }

@@ -1,0 +1,30 @@
+<component name="ArtifactManager">
+  <artifact build-on-make="true" name="DNSWatcher:jar">
+    <output-path>$PROJECT_DIR$/out/artifacts/DNSWatcher_jar</output-path>
+    <root id="root">
+      <element id="archive" name="DNSWatcher.jar">
+        <element id="directory" name="META-INF">
+          <element id="file-copy" path="$PROJECT_DIR$/src/resources/META-INF/MANIFEST.MF" />
+        </element>
+        <element id="module-output" name="DNSWatcher" />
+      </element>
+      <element id="directory" name="libs">
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/jl1.0.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/jsr173_1.0_api.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/commons-collections4-4.1-bin/commons-collections4-4.1/commons-collections4-4.1.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/poi-3.17/poi-3.17.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/poi-3.17/poi-examples-3.17.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/poi-3.17/poi-excelant-3.17.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/poi-3.17/poi-ooxml-3.17.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/poi-3.17/poi-ooxml-schemas-3.17.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/poi-3.17/poi-scratchpad-3.17.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/resolver.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/xbean.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/xbean_xpath.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/xmlbeans-qname.jar" />
+        <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/xmlpublic.jar" />
+        <element id="library" level="project" name="forms_rt" />
+      </element>
+    </root>
+  </artifact>
+</component>
