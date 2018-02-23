@@ -72,7 +72,7 @@ public class Designer {
 
     public void show() throws Exception {
         JFrame frame = new JFrame("DNSMonitor by肖祎杰");
-        ImageIcon icon = new ImageIcon("./src/images/AHCmccLogo.jpg");
+        ImageIcon icon = new ImageIcon(this.getClass().getResource("images/AHCmccLogo.jpg"));
         frame.setIconImage(icon.getImage());
         frame.setResizable(false);
         frame.setContentPane(new Designer().jp_total);
@@ -187,7 +187,7 @@ public class Designer {
                 hostName.setText(reading);
                 if (hostName.getText().contains("false")) {
                     hostName.setForeground(Color.RED);
-                    MP3Player mp3Player = new MP3Player("./src/alarm.mp3");
+                    MP3Player mp3Player = new MP3Player(this.getClass().getResource("alarm.mp3"));
                     wrongNum++;
 //                    System.out.println("Wrong");
                 }//如果解析结果不同，产生告警音

@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/DNSWatcher.iml" filepath="$PROJECT_DIR$/DNSWatcher.iml" />
+      <module fileurl="file://$PROJECT_DIR$/DNSMonitor.iml" filepath="$PROJECT_DIR$/DNSMonitor.iml" />
     </modules>
   </component>
 </project>

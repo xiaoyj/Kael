@@ -1,10 +1,7 @@
 import java.io.BufferedInputStream;
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.IOException;
+import java.net.URL;
 
 import javazoom.jl.player.Player;
-
 import javax.sound.sampled.*;
 
 /**
@@ -15,9 +12,9 @@ public class MP3Player {
 
     public static Player player;
 
-    public MP3Player(String musicRouting) {
+    public MP3Player(URL musicRouting) {
         try {
-            BufferedInputStream buffer = new BufferedInputStream(new FileInputStream(musicRouting));
+            BufferedInputStream buffer = new BufferedInputStream(musicRouting.openStream());
             player = new Player(buffer);
             player.play();
         } catch (Exception e) {
