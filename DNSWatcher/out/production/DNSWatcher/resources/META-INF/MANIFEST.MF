@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: libs/forms_rt.jar libs/commons-collections4-4.1.jar libs/x
- bean.jar libs/resolver.jar libs/xmlpublic.jar libs/xbean_xpath.jar li
- bs/jsr173_1.0_api.jar libs/xmlbeans-qname.jar libs/jl1.0.1.jar libs/p
- oi-3.17.jar libs/poi-ooxml-3.17.jar libs/poi-examples-3.17.jar libs/p
- oi-excelant-3.17.jar libs/poi-scratchpad-3.17.jar libs/poi-ooxml-sche
- mas-3.17.jar
-Main-Class: Main
-

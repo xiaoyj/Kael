@@ -1,8 +1,0 @@
-Manifest-Version: 1.0
-Class-Path: forms_rt.jar commons-collections4-4.1.jar xbean.jar resolv
- er.jar xmlpublic.jar xbean_xpath.jar jsr173_1.0_api.jar xmlbeans-qnam
- e.jar jl1.0.1.jar poi-3.17.jar poi-ooxml-3.17.jar poi-examples-3.17.j
- ar poi-excelant-3.17.jar poi-scratchpad-3.17.jar poi-ooxml-schemas-3.
- 17.jar
-Main-Class: Main
-

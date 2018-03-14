@@ -1,0 +1,1 @@
+java -Dnetworkaddress.cache.ttl=60 -Dsun.net.inetaddr.ttl=60 DNSMonitor

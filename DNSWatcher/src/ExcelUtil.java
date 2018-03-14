@@ -213,6 +213,40 @@ public class ExcelUtil {
         }
     }
 
+    public static void writeExcelRight(ArrayList<ArrayList<Object>> result,String path){
+        if(result == null){
+            return;
+        }
+        HSSFWorkbook wb = new HSSFWorkbook();
+        HSSFSheet sheet = wb.createSheet("sheet1");
+        for(int i = 0 ;i < result.get(0).size() ; i++){
+            HSSFRow row = sheet.createRow(i);
+            for(int j = 0; j < result.size() ; j ++){
+                HSSFCell cell = row.createCell(j);
+                cell.setCellValue(result.get(j).get(i).toString());
+            }
+        }
+        ByteArrayOutputStream os = new ByteArrayOutputStream();
+        try
+        {
+            wb.write(os);
+        } catch (IOException e){
+            e.printStackTrace();
+        }
+        byte[] content = os.toByteArray();
+        File file = new File(path);//Excel文件生成后存储的位置。
+        OutputStream fos  = null;
+        try
+        {
+            fos = new FileOutputStream(file);
+            fos.write(content);
+            os.close();
+            fos.close();
+        }catch (Exception e){
+            e.printStackTrace();
+        }
+    }
+
     public static DecimalFormat getDf() {
         return df;
     }

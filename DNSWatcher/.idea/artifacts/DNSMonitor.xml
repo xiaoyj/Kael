@@ -1,6 +1,9 @@
 <component name="ArtifactManager">
   <artifact build-on-make="true" name="DNSMonitor">
     <output-path>$PROJECT_DIR$/out/artifacts/DNSMonitor</output-path>
+    <properties id="ant-postprocessing">
+      <options enabled="true" />
+    </properties>
     <root id="root">
       <element id="archive" name="DNSMonitor.jar">
         <element id="directory" name="META-INF">
@@ -24,6 +27,9 @@
         <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/xmlbeans-qname.jar" />
         <element id="file-copy" path="$PROJECT_DIR$/../javaPacket/xmlbeans-current/xmlbeans-2.6.0/lib/xmlpublic.jar" />
         <element id="library" level="project" name="forms_rt" />
+        <element id="file-copy" path="C:/Program Files/Java/javamail-1.4.7/mail.jar" />
+        <element id="file-copy" path="C:/Program Files/Java/jaf-1.1.1/activation.jar" />
+        <element id="file-copy" path="C:/Program Files/Java/dnsjava-2.1.8.jar" />
       </element>
     </root>
   </artifact>
